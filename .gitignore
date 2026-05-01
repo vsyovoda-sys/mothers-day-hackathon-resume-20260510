@@ -1,4 +1,5 @@
 .DS_Store
+.github/
 *.tmp
 截屏*.png
 omphalina二维码.png
