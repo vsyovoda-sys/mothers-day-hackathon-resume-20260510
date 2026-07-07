@@ -239,7 +239,7 @@
 
         /* --- P2: 项目展示 (布局核心) --- */
         .page-projects {
-            padding: 6rem 3.5rem 3rem;
+            padding: 3.8rem 3.5rem 1.2rem;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -260,14 +260,42 @@
             font-size: 0.95rem;
         }
 
+        .project-groups {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            min-height: 0;
+            flex: 1;
+        }
+
+        .project-group {
+            min-height: 0;
+        }
+
+        .project-group-title {
+            display: flex;
+            align-items: baseline;
+            gap: 0.7rem;
+            margin: 0 0 0.36rem 0.2rem;
+            font-family: 'Noto Serif SC', serif;
+        }
+
+        .project-group-title h2 {
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .project-group-title span {
+            color: #777;
+            font-size: 0.72rem;
+        }
+
         .projects-scroll-wrapper {
             display: flex;
-            gap: 1.2rem;
+            gap: 0.85rem;
             overflow-x: scroll;
-            padding: 0.2rem 1rem 1.8rem 0;
+            padding: 0.1rem 1rem 0.75rem 0;
             width: 100%;
-            flex: 1;
-            max-height: calc(100vh - 11rem);
             align-items: flex-start;
             scrollbar-width: thin;
             scrollbar-color: #111 rgba(0,0,0,0.08);
@@ -288,10 +316,10 @@
         }
 
         .project-card {
-            width: min(48vh, 310px);
-            min-width: min(48vh, 310px);
-            max-width: 310px;
-            height: min(64vh, 413px);
+            width: min(28vh, 218px);
+            min-width: min(28vh, 218px);
+            max-width: 218px;
+            height: min(34vh, 260px);
             aspect-ratio: 3 / 4;
             background: rgba(255, 255, 255, 0.92);
             padding: 0;
@@ -331,26 +359,26 @@
         }
 
         .project-body {
-            padding: 0.9rem 1rem 1rem;
+            padding: 0.58rem 0.72rem 0.68rem;
             display: flex;
             flex-direction: column;
-            gap: 0.45rem;
+            gap: 0.32rem;
             flex: 1;
             min-height: 0;
         }
 
         .project-title {
             font-family: 'Noto Serif SC', serif;
-            font-size: 0.98rem;
+            font-size: 0.78rem;
             font-weight: bold;
             border-bottom: 1px dashed #ccc;
-            padding-bottom: 0.3rem;
+            padding-bottom: 0.22rem;
         }
 
         .project-tag {
             align-self: flex-start;
-            font-size: 0.68rem;
-            line-height: 1.4;
+            font-size: 0.58rem;
+            line-height: 1.3;
             padding: 0.16rem 0.45rem;
             border: 1px solid rgba(0,0,0,0.12);
             background: #F7EFE8;
@@ -359,8 +387,8 @@
         }
 
         .project-desc {
-            font-size: 0.74rem;
-            line-height: 1.48;
+            font-size: 0.61rem;
+            line-height: 1.36;
             flex-grow: 1;
             color: #333;
             overflow: hidden;
@@ -380,8 +408,8 @@
             text-decoration: none;
             color: #fff;
             background: #000;
-            padding: 0.42rem 0.7rem;
-            font-size: 0.72rem;
+            padding: 0.32rem 0.54rem;
+            font-size: 0.62rem;
             text-align: center;
             border: 1px solid #000;
             border-radius: 4px;
@@ -762,7 +790,7 @@
             <div class="cover-content-left">
                 <div class="cover-nav">
                     <p style="font-size: 0.8rem; color: #666; margin-bottom: 0.8rem;">点击跳转到目标页</p>
-                    <a href="#p2" class="cover-nav-link">· AI项目</a>
+                    <a href="#p2" class="cover-nav-link">· 和 AI 相关的尝试</a>
                     <a href="#p3" class="cover-nav-link">· AI技能</a>
                     <a href="#p4" class="cover-nav-link">· 未来规划</a>
                     <a href="#p5" class="cover-nav-link">· 工作技能&amp;背景</a>
@@ -789,169 +817,232 @@
 
         <section id="p2" class="page-projects">
             <a href="#p1" class="back-to-cover">← 回到封面</a>
-            <div class="number-indicator">02 <span>AI项目</span></div>
+            <div class="number-indicator">02 <span>和 AI 相关的尝试</span></div>
 
-            <div class="projects-scroll-wrapper">
-
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="yiyi-project.jpg" alt="医依项目" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder-art&quot;>医依项目</div>'">
+            <div class="project-groups">
+                <div class="project-group">
+                    <div class="project-group-title">
+                        <h2>AI Demo</h2>
+                        <span>从想法、交互到可访问原型</span>
                     </div>
-                    <div class="project-body">
-                        <div class="project-title">实时匹配互助陪诊应用｜医依</div>
-                        <span class="project-tag">She Nicest北京黑客松C002作品</span>
-                        <p class="project-desc">为独自就医者设计的互助陪诊应用。通过 AI 建档、自然语言交互和 LBS 匹配，连接附近 3-5 公里内可提供帮助的人。</p>
-                        <div class="project-actions">
-                            <a href="https://vsyovoda-sys.github.io/yiyi-escort-demo/slides.html" target="_blank" class="project-link">项目演示</a>
-                            <a href="https://mp.weixin.qq.com/s/_v3iFSJcKF5kTeeOJtWlvg" target="_blank" class="project-link secondary">产品访谈</a>
+
+                    <div class="projects-scroll-wrapper">
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="yiyi-project.jpg" alt="医依项目" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder-art&quot;>医依项目</div>'">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">实时匹配互助陪诊应用｜医依</div>
+                                <span class="project-tag">She Nicest北京黑客松C002作品</span>
+                                <p class="project-desc">为独自就医者设计的互助陪诊应用。通过 AI 建档、自然语言交互和 LBS 匹配，连接附近 3-5 公里内可提供帮助的人。</p>
+                                <div class="project-actions">
+                                    <a href="https://vsyovoda-sys.github.io/yiyi-escort-demo/slides.html" target="_blank" class="project-link">项目演示</a>
+                                    <a href="https://mp.weixin.qq.com/s/_v3iFSJcKF5kTeeOJtWlvg" target="_blank" class="project-link secondary">产品访谈</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="mary-shelley-project.png" alt="玛丽雪莱项目截图" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder-art&quot;>请添加<br>mary-shelley-project.png</div>'">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">玛丽雪莱｜故事与造物</div>
+                                <p class="project-desc">关于玛丽·雪莱的互动叙事网页。从他人对她的改写切入，串联《弗兰肯斯坦》、女性科幻史与 AI 时代的造物责任。</p>
+                                <div class="project-actions">
+                                    <a href="https://vsyovoda-sys.github.io/k2-6-kimi-website/?v=ec26dfa" target="_blank" class="project-link">访问项目</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="endless-dreams.png" alt="无尽之梦" style="object-fit: contain; background: linear-gradient(180deg, #c8b6e8, #a8c8f0);">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">无尽之梦｜A2A 潜意识社交</div>
+                                <p class="project-desc">Second Me A2A 黑客松参赛作品。用户清晨记录梦境，Agent 分身带着它去与陌生人的 Agent 相遇，再把对方的碎片带回并重写原梦。</p>
+                                <div class="project-actions">
+                                    <a href="https://endless-dreams-tau.vercel.app" target="_blank" class="project-link">访问项目</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="omphalina.jpg" alt="Omphalina" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Omphalina</div>'">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">Omphalina｜人造化合物历史模拟器</div>
+                                <p class="project-desc">由 Gemini 实时生成叙事的历史互动游戏。玩家扮演人造化合物关键节点上的“创造者”，体验技术进步与不可预知后果之间的张力。</p>
+                                <div class="project-actions">
+                                    <a href="https://beautiful-kulfi-9ca049.netlify.app/" target="_blank" class="project-link">试玩游戏</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="Context English.png" alt="Context English 项目截图" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder-art&quot;>Context English</div>'">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">Context English</div>
+                                <p class="project-desc">基于 AI 的英语学习工具，核心是“拒绝硬记，在情景中背单词”。它能生成真实语境例句、记忆故事和场景词汇。</p>
+                                <div class="project-actions">
+                                    <a href="https://context-english.vercel.app/" target="_blank" class="project-link">访问项目</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="事实距离器.png" alt="事实距离器项目截图" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder-art&quot;>事实距离器</div>'">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">事实距离器</div>
+                                <p class="project-desc">把观点与档案事实进行对比的工具。它通过语义检索公开资料与本地档案，结构化呈现矛盾、缺失上下文、表述偏差和无法验证之处。</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="自动化采集工具.png" alt="自动化采集工具项目截图" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder-art&quot;>自动化采集工具</div>'">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">自动化采集工具</div>
+                                <p class="project-desc">面向运营人员的数据采集脚本，通过图像识别和鼠标模拟自动浏览网页、复制公开数据并写入 CSV。支持增量采集、防重复和异常补救。</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="hyphae.png" alt="Hyphae Demo">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">Hyphae 网页搭建</div>
+                                <p class="project-desc">在 She Code Lab 组织的北京 Vibe Coding 活动中，我第一次完整搭成自己的网页，确认非技术背景的人也能把想法推进到可访问作品形态。</p>
+                                <div class="project-actions">
+                                    <a href="https://vsyovoda-sys.github.io/Hyphae-demo/frontend/index.html" target="_blank" class="project-link">访问网页</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="mary-shelley-project.png" alt="玛丽雪莱项目截图" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder-art&quot;>请添加<br>mary-shelley-project.png</div>'">
+                <div class="project-group">
+                    <div class="project-group-title">
+                        <h2>关于 AI 的思考和表达</h2>
+                        <span>公共分享、内容实验与社群组织</span>
                     </div>
-                    <div class="project-body">
-                        <div class="project-title">玛丽雪莱｜故事与造物</div>
-                        <p class="project-desc">关于玛丽·雪莱的互动叙事网页。从他人对她的改写切入，串联《弗兰肯斯坦》、女性科幻史与 AI 时代的造物责任。</p>
-                        <div class="project-actions">
-                            <a href="https://vsyovoda-sys.github.io/k2-6-kimi-website/?v=ec26dfa" target="_blank" class="project-link">访问项目</a>
+
+                    <div class="projects-scroll-wrapper">
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="she-origin-storyteller-card.jpg" alt="原点学堂分享现场">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">原点学堂分享｜AI时代我们需要什么样的社群及 Story Teller</div>
+                                <span class="project-tag">She Nicest × 北京海淀区孵化社区原点学堂</span>
+                                <p class="project-desc">围绕女性黑客松、AI 时代产品形态、媒体承接与公共议题，讨论技术社群如何成为创作者从个体风险走向协作生态的连接器。</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="zhihu-ai-graduation-card.jpg" alt="知乎盐沙龙 AI 分享">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">知乎盐沙龙｜毕业季 AI 分享</div>
+                                <span class="project-tag">知乎毕业季 × 盐 Salon</span>
+                                <p class="project-desc">以“把最不喜欢的事情交给 AI”为切口，分享如何把 AI 从效率工具转化为注意力释放、创造力回收和个人行动选择的基础设施。</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="she-builder-meetup-card.jpg" alt="She Nicest Builder Meetup 北京场">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">She Nicest Builder Meetup 北京场组织</div>
+                                <span class="project-tag">Rebuild the Internet｜如果互联网重新开始</span>
+                                <p class="project-desc">参与组织面向 AI 开发者、产品经理、设计师与独立开发者的线下 Meetup，通过主题分享、60 分钟极限 Build 和 Demo 展示，连接女性科技社群与 AI 创新生态。</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="xinzhi-youth-share-card.jpg" alt="新知青年大会分享视觉">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">新知青年大会分享</div>
+                                <span class="project-tag">女性、AI 与个人创造</span>
+                                <p class="project-desc">从“像猫一样编程，像猫一样生活”的视角，把 AI 协作、女性创造和个人行动经验讲给更广泛的青年公共现场。</p>
+                                <div class="project-actions">
+                                    <a href="http://xhslink.com/o/6O0oIiWsBjP" target="_blank" class="project-link">观看视频</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="tv-design.jpg" alt="电视台赛事视觉设计" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">视觉设计起步</div>
+                                <p class="project-desc">为电视台赛事完成全程视觉物料设计，是我从内容策划延伸到视觉生产的起点，也开始用 AI 协作补足非科班视觉能力。</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="mj-share.jpg" alt="公司AI分享会">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">Midjourney 分享会</div>
+                                <p class="project-desc">公司内部图像生成 AI 分享会，围绕 Midjourney 的 cref 与 sref 功能，拆解角色一致性和风格参考在营销视觉中的使用方法。</p>
+                                <div class="project-actions">
+                                    <a href="https://www.canva.cn/design/DAGGVDMgVKo/siClYjdQHtfIvZ9xnoBLyw/edit?utm_content=DAGGVDMgVKo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">演示文档</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="dream-board.jpg" alt="梦境重绘留言板">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">个人理念表达</div>
+                                <p class="project-desc">从 2024 年开始，我尝试用 AI 做一些表达个人理念的小项目，比如帮助别人重绘梦境的留言板。</p>
+                                <div class="project-actions">
+                                    <a href="https://tu0tu0.notepin.co/" target="_blank" class="project-link">访问留言板</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="xiaohongshu.png" alt="小红书运营">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">AI观点小红书</div>
+                                <p class="project-desc">运营一个围绕 AI 讲述观点的小红书账号，用更个人化的语言讨论我认为重要但常被主流叙事忽略的视角。</p>
+                                <div class="project-actions">
+                                    <a href="https://xhslink.com/m/2TDmTajCPmm" target="_blank" class="project-link">访问小红书</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-img-area">
+                                <img src="community.jpg" alt="行业大会与公益">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-title">社区参与</div>
+                                <p class="project-desc">持续参与 AI 与编程教育相关活动，包括微软创想未来峰会、极客公园 AGI PlayGround，以及 Datawhale、狮偶、Microblocks 的公益分享会。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="endless-dreams.png" alt="无尽之梦" style="object-fit: contain; background: linear-gradient(180deg, #c8b6e8, #a8c8f0);">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-title">无尽之梦｜A2A 潜意识社交</div>
-                        <p class="project-desc">Second Me A2A 黑客松参赛作品。用户清晨记录梦境，Agent 分身带着它去与陌生人的 Agent 相遇，再把对方的碎片带回并重写原梦。项目关注的是陌生性交换，而非相似性推荐。</p>
-                        <div class="project-actions">
-                            <a href="https://endless-dreams-tau.vercel.app" target="_blank" class="project-link">访问项目</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="omphalina.jpg" alt="Omphalina" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Omphalina</div>'">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-title">Omphalina｜人造化合物历史模拟器</div>
-                        <p class="project-desc">由 Gemini 实时生成叙事的历史互动游戏。玩家扮演人造化合物关键节点上的“创造者”，体验技术进步与不可预知后果之间的张力。</p>
-                        <div class="project-actions">
-                            <a href="https://beautiful-kulfi-9ca049.netlify.app/" target="_blank" class="project-link">试玩游戏</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="Context English.png" alt="Context English 项目截图" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder-art&quot;>Context English</div>'">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-title">Context English</div>
-                        <p class="project-desc">基于 AI 的英语学习工具，核心是“拒绝硬记，在情景中背单词”。它能生成真实语境例句、记忆故事和场景词汇，并自动补充发音、释义、搭配、同义词与词根词缀。</p>
-                        <div class="project-actions">
-                            <a href="https://context-english.vercel.app/" target="_blank" class="project-link">访问项目</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="事实距离器.png" alt="事实距离器项目截图" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder-art&quot;>事实距离器</div>'">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-title">事实距离器</div>
-                        <p class="project-desc">把观点与档案事实进行对比的工具。它通过语义检索公开资料与本地档案，结构化呈现矛盾、缺失上下文、表述偏差和无法验证之处，让观点与事实之间的距离显影。</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="自动化采集工具.png" alt="自动化采集工具项目截图" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder-art&quot;>自动化采集工具</div>'">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-title">自动化采集工具</div>
-                        <p class="project-desc">面向运营人员的数据采集脚本，通过图像识别和鼠标模拟自动浏览网页、复制公开数据并写入 CSV。支持增量采集、防重复和异常补救，适合日常高频资料整理。</p>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="tv-design.jpg" alt="电视台赛事视觉设计" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-title">视觉设计起步</div>
-                        <p class="project-desc">为电视台赛事完成全程视觉物料设计，是我从内容策划延伸到视觉生产的起点。这个项目让我开始用 AI 协作补足非科班视觉能力，并逐步建立品牌调性判断和落地制作之间的连接。</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="mj-share.jpg" alt="公司AI分享会">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-title">Midjourney 分享会</div>
-                        <p class="project-desc">公司内部图像生成 AI 分享会，围绕 Midjourney 当时新发布的 cref 与 sref 功能，拆解角色一致性和风格参考在营销视觉中的使用方法。分享重点是把模型能力翻译成团队可复用的工作方法。</p>
-                        <div class="project-actions">
-                            <a href="https://www.canva.cn/design/DAGGVDMgVKo/siClYjdQHtfIvZ9xnoBLyw/edit?utm_content=DAGGVDMgVKo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">演示文档</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="dream-board.jpg" alt="梦境重绘留言板">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-title">个人理念表达</div>
-                        <p class="project-desc">从 2024 年开始，我尝试用 AI 做一些表达个人理念的小项目，比如帮助别人重绘梦境的留言板。它不追求高频反馈，更像是用轻量工具测试“AI 能否承接私人经验再表达”的一次练习。</p>
-                        <div class="project-actions">
-                            <a href="https://tu0tu0.notepin.co/" target="_blank" class="project-link">访问留言板</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="xiaohongshu.png" alt="小红书运营">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-title">AI观点小红书</div>
-                        <p class="project-desc">运营一个围绕 AI 讲述观点的小红书账号，用更个人化的语言讨论我认为重要但常被主流叙事忽略的视角。它同时也是我测试 AI 议题内容表达、受众反馈和平台传播逻辑的实验场。</p>
-                        <div class="project-actions">
-                            <a href="https://xhslink.com/m/2TDmTajCPmm" target="_blank" class="project-link">访问小红书</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="community.jpg" alt="行业大会与公益">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-title">社区参与</div>
-                        <p class="project-desc">持续参与 AI 与编程教育相关活动，包括微软创想未来峰会、极客公园 AGI PlayGround，以及 Datawhale、狮偶、Microblocks 的公益分享会。这些经历帮助我把 AI 从工具理解扩展到社区协作、公共教育和长期影响。</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img-area">
-                        <img src="hyphae.png" alt="Hyphae Demo">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-title">Hyphae 网页搭建</div>
-                        <p class="project-desc">在 She Code Lab 组织的北京 Vibe Coding 活动中，我第一次完整搭成自己的网页。这个项目让我确认：非技术背景的人也可以通过清晰表达、快速迭代和 AI 协作，把想法推进到可访问的作品形态。</p>
-                        <div class="project-actions">
-                            <a href="https://vsyovoda-sys.github.io/Hyphae-demo/frontend/index.html" target="_blank" class="project-link">访问网页</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
@@ -979,10 +1070,10 @@
                 </div>
 
                 <div class="skill-item">
-                    <h3>团队中最AI native的项目管理者</h3>
-                    <p class="skill-summary">为团队搭建AI运营系统，以本地Agent、飞书云端数据库与 Open claw 分层承接不同复杂度任务</p>
-                    <p>面对复杂项目，我用本地Agent搭建可复用工作流；涉及云端协作和数据库时，则以飞书多维表格/CLI链路作为团队接口。个人知识检索交给部署在本地、通过飞书机器人连接的 Open claw，承担类似轻量SQL的查询与沉淀任务。</p>
-                    <p>已落地的工作包括账号调性文案生成、长视频精剪短视频/精华集锦、UGC自动化打分、数据抓取与上传链路，这些流程不只服务个人，也直接嵌入团队日常运营。</p>
+                    <h3>She Nicest 社群运营</h3>
+                    <p class="skill-summary">把女性 Builder 文化、AI 工具实践与线下共创场景连接起来</p>
+                    <p>加入 She Nicest 后，我开始参与女性科技社群的内容、活动与公共表达：从黑客松议题梳理、活动文案、课程设计，到原点学堂分享、知乎盐沙龙对谈、新知青年大会分享和 Builder Meetup 北京场组织。</p>
+                    <p>这部分工作让我从“做项目的人”进一步变成“连接项目、作者、受众和资源的人”：既能把 AI 工具讲成普通人可进入的方法，也能把女性创造者的真实作品带到更大的公共现场。</p>
                 </div>
             </div>
         </section>
@@ -1048,6 +1139,7 @@
                         <li>项目组工作的统筹协调</li>
                         <li>符合品牌调性的内容和视觉制作</li>
                         <li>媒介采买与投放</li>
+                        <li>公共表达、科技社群内容与线下活动组织</li>
                     </ul>
                 </div>
             </div>
